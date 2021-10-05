@@ -6,7 +6,7 @@
   <script>
     function display(){var number = document.getElementById("bnumber");
 		      var randInt = Math.floor(Math.random() * bnumber.value);
-                      document.title = 'Your number is ' + randInt;
+                      document.title = 'Your random number from 0 to ' + bnumber.value + ' is ' + randInt + '.';
 		      alert("You asked for a number between 0 and " + bnumber.value + ". It is " + randInt + ".");
 		      
 }</script></head>
