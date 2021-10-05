@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Title</title>
+  <script>
+    function display(){var number = document.getElementById("bnumber");
+                      console.log("You asked for a number between 0 and " + bnumber.value + ". It is " + Math.floor(Math.random() * bnumber.value) + ".");
+                      alert("You asked for a number between 0 and " + bnumber.value + ". It is " + Math.floor(Math.random() * bnumber.value) + ".");
+}</script></head>
+  <body>
+	<p>
+      <button onclick="display()">
+      Generate random number
+    </button>
+    </p>
+    <label for="bnumber">Choose a max number:</label>
+
+<input type="number" min="1" max="100" value="10" id="bnumber">
+  <p>
+  Minumum number for this box is 1 because the random number runs from 0 to this number.
+    </p></body>
+</html>
