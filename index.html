@@ -2,11 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Title</title>
+    <title>Random Number Generator With Min = 0 and Max = (1 to 100)</title>
   <script>
     function display(){var number = document.getElementById("bnumber");
-                      console.log("You asked for a number between 0 and " + bnumber.value + ". It is " + Math.floor(Math.random() * bnumber.value) + ".");
-                      alert("You asked for a number between 0 and " + bnumber.value + ". It is " + Math.floor(Math.random() * bnumber.value) + ".");
+		      var randInt = Math.floor(Math.random() * bnumber.value);
+                      console.log("You asked for a number between 0 and " + bnumber.value + ". It is " + randInt + ".");
+                      alert("You asked for a number between 0 and " + bnumber.value + ". It is " + randInt + ".");
+		      document.title = 'Your number is ' + randInt
 }</script></head>
   <body>
 	<p>
