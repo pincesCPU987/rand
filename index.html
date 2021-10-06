@@ -6,24 +6,9 @@
   <script>
     function display(){var number = document.getElementById("bnumber");
 		      var randInt = Math.floor(Math.random() * bnumber.value);
-                      document.title = 'Your random number from 0 to ' + bnumber.value + ' is ' + randInt + '.';
-		      addElement();
+                      document.title = ;
+		      docunemt.write('Your random number from 0 to ' + bnumber.value + ' is ' + randInt + '.');
 		      }
-
-function addElement () {
-  // create a new div element
-  var newDiv = document.createElement("div");
-
-  // and give it some content
-  const newContent = document.createTextNode("Your random number from 0 to " + bnumber.value + " is " + randInt + ".");
-
-  // add the text node to the newly created div
-  newDiv.appendChild(newContent);
-
-  // add the newly created element and its content into the DOM
-  const currentDiv = document.getElementById("div1");
-  document.body.insertBefore(newDiv, currentDiv);
-}
 </script></head>
   <body>
 	<p>
