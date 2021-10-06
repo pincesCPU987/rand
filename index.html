@@ -6,7 +6,7 @@
   <script>
     function display(){var max = document.getElementById("bnumber");
 		      var randInt = Math.floor(Math.random() * bnumber.value);
-                      document.title = 'Your number from 0 to ' + randInt + ' is ' + max + '.';
+                      document.title = 'Your number from 0 to ' + max + ' is ' + randInt + '.';
 		      alert('You asked for a number from 0 to ' + max + '. It is ' + randInt = '.');
 		      }
 </script></head>
@@ -18,7 +18,7 @@
     </p>
     <label for="bnumber">Choose a max number:</label>
 
-<input type="bnumber" min="1" max="100" value="10" id="bnumber">
+<input type="number" min="1" max="100" value="10" id="bnumber" />
   <p>
   Minumum number for this box is 1 because the random number runs from 0 to this number.
 	  </p><p><button onclick="window.location.reload();">Reload</button></p></body>
