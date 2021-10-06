@@ -7,9 +7,24 @@
     function display(){var number = document.getElementById("bnumber");
 		      var randInt = Math.floor(Math.random() * bnumber.value);
                       document.title = 'Your random number from 0 to ' + bnumber.value + ' is ' + randInt + '.';
-		      alert("You asked for a number between 0 and " + bnumber.value + ". It is " + randInt + ".");
-		      
-}</script></head>
+		      addElement();
+		      }
+
+function addElement () {
+  // create a new div element
+  var newDiv = document.createElement("div");
+
+  // and give it some content
+  const newContent = document.createTextNode("Your random number from 0 to " + bnumber.value + " is " + randInt + ".");
+
+  // add the text node to the newly created div
+  newDiv.appendChild(newContent);
+
+  // add the newly created element and its content into the DOM
+  const currentDiv = document.getElementById("div1");
+  document.body.insertBefore(newDiv, currentDiv);
+}
+</script></head>
   <body>
 	<p>
       <button onclick="display()">
@@ -21,5 +36,5 @@
 <input type="number" min="1" max="100" value="10" id="bnumber">
   <p>
   Minumum number for this box is 1 because the random number runs from 0 to this number.
-	  </p><p><button onclick="window.location.reload();">Reload</button></p></body>
+	  </p><div id="div1"></div><p><button onclick="window.location.reload();">Reload</button></p></body>
 </html>
